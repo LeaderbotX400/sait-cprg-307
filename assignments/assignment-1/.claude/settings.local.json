@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//tmp/docx_extract/**)",
+      "Bash(perl -pe 's/<[^>]+>/\\\\n/g; s/\\\\n+/\\\\n/g' a1/word/document.xml)"
+    ]
+  }
+}
