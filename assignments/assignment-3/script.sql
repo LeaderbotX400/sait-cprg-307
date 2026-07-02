@@ -102,6 +102,8 @@ BEGIN
             FETCH c_details INTO r_detail;
             EXIT WHEN c_details%NOTFOUND;
 
+            EXCEPTION
+
             INSERT INTO transaction_detail (account_no, transaction_no, transaction_type, transaction_amount)
             VALUES (r_detail.account_no, r_transaction.transaction_no, r_detail.transaction_type, r_detail.transaction_amount);
 
